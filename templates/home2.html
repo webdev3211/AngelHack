@@ -1,0 +1,28 @@
+
+{% extends 'layouts.html' %}
+{% block body %}
+
+<section id="cover">
+        <div id="cover-caption">
+            <div id="container" class="container">
+                <div class="row">
+                    <div class="col-sm-6 offset-sm-3 text-center">
+
+                            <!-- {% if success %}
+                            <div class="alert alert-danger" role="alert">
+                                    {{success}}
+                                  </div>
+                            {% endif %} -->
+                        <h1 class="display-2">Med AI</h1>
+                        {% for l in sym1 %}
+                        <p>{{l}}</p>
+                        {% endfor %}
+                        <!-- <a href="#nav-main" class="btn btn-outline-secondary btn-sm" role="button">
+                            More
+                        </a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

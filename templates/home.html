@@ -1,0 +1,41 @@
+ {% extends 'layouts.html' %} {% block body %}
+<!-- <style>
+* { font-family:Arial; }
+a { color:#999; text-decoration: none; }
+a:hover { color:#802727; }
+
+input { padding:5px; border:1px solid #999; border-radius:4px; -moz-border-radius:4px; -web-kit-border-radius:4px; -khtml-border-radius:4px; }
+</style> -->
+<section id="cover">
+    <div id="cover-caption">
+        <div id="container" class="container">
+            <div class="row">
+                <div class="col-sm-6 offset-sm-3 text-center">
+
+                    <br>
+                    <br>
+
+                    <form action="/" method="POST" id="form">
+                        <button class="text-center btn btn-success btn-block btn-lg" type="submit"> Check now!</button>
+                        <br>
+                        <input id="sympton" style="border: 2px solid black;" placeholder="Enter your sympton......." type="text" name="mytext[]"
+                            class="form-control" autocomplete="off">
+                        <br>
+
+                    </form>
+                    <button id="add" class="text-center btn btn-block btn-primary btn-lg ">
+                        Add
+                    </button>
+
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

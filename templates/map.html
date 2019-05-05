@@ -1,0 +1,310 @@
+{% extends 'layouts.html' %} {% block body %}
+<!-- {% if success %}
+<h1>{{success}}</h1>
+{% endif %} -->
+<section id="cover">
+  <div id="cover-caption">
+    <div id="container" class="container">
+      <div class="row">
+
+
+        <div class="col-sm-6 offset-sm-3 text-center">
+          <!DOCTYPE html>
+          <html>
+
+          <head>
+            <style>
+              /* Set the size of the div element that contains the map */
+
+              .mapp {
+                height: 300px;
+                /* The height is 400 pixels */
+                /* width: 100%; */
+                /* flex-direction: column; */
+                /* The width is the width of the web page */
+              }
+
+              #panelllll {
+                box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2);
+              }
+
+              .card-title {
+                font-weight: bold;
+              }
+            </style>
+          </head>
+
+          <body style="background:url('');">
+            <br>
+            <br>
+            <div class="container">
+              <div class="row">
+
+                <div class="col-sm-12">
+
+                  <!-- <h2></h2> -->
+
+
+
+                  <div class="card" id="panelllll" style="margin-left: 55px; width:100%;">
+                    <div class="card card-default" style="margin:0;">
+                      <div class="card-heading text-center" style="background:#5fba7d; padding: 25px;font-size: 30px; font-weight:bold; color: white;">Test Predicted</div>
+                      <ul class="card-body" style="height: 190px; list-style: none;">
+                        {% for test in test_list %}
+
+                        <li style="font-size: 0.85em; color: grey; font-family: cursive;margin-bottom: 5px;">
+                          <h3>
+                            <b style="font-size: 2rem;"> {{ test }}</b>
+                          </h3>
+                        </li>
+                        {% endfor %}
+
+                      </ul>
+                    </div>
+                  </div>
+
+
+
+                </div>
+              </div>
+            </div>
+            <br>
+            <br>
+            <h3>
+              <b>Nearest hospitals/labs location</b>
+            </h3>
+            <br>
+            <hr>
+            <br>
+
+            <div id="content">
+
+              <div class="card" style="width: 40rem;">
+                <div id="map1" class="mapp card-img-top"></div>
+                <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+                <div class="card-body">
+                  <h5 class="card-title">{{ places[0].name }}</h5>
+
+                </div>
+              </div>
+
+              <br>
+
+              <div class="card" style="width: 40rem;">
+                <div id="map2" class="mapp card-img-top"></div>
+                <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+                <div class="card-body">
+                  <h5 class="card-title">{{ places[1].name }}</h5>
+
+                </div>
+              </div>
+
+              <br>
+
+              <div class="card" style="width: 40rem;">
+                <div id="map3" class="mapp card-img-top"></div>
+                <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+                <div class="card-body">
+                  <h5 class="card-title">{{ places[2].name }}</h5>
+
+                </div>
+              </div>
+
+              <br>
+
+              <div class="card" style="width: 40rem;">
+                <div id="map4" class="mapp card-img-top"></div>
+                <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+                <div class="card-body">
+                  <h5 class="card-title">{{ places[3].name }}</h5>
+
+                </div>
+              </div>
+
+              <br>
+
+
+              <div class="card" style="width: 40rem;">
+                <div id="map5" class="mapp card-img-top"></div>
+                <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+                <div class="card-body">
+                  <h5 class="card-title">{{ places[4].name }}</h5>
+
+                </div>
+              </div>
+
+              <br>
+
+              <div class="card" style="width: 40rem;">
+                <div id="map6" class="mapp card-img-top"></div>
+                <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+                <div class="card-body">
+                  <h5 class="card-title">{{ places[5].name }}</h5>
+
+                </div>
+              </div>
+
+              <br>
+
+
+              <div class="card" style="width: 40rem;">
+                <div id="map7" class="mapp card-img-top"></div>
+                <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+                <div class="card-body">
+                  <h5 class="card-title">{{ places[6].name }}</h5>
+
+                </div>
+              </div>
+
+              <br>
+
+
+              <div class="card" style="width: 40rem;">
+                <div id="map8" class="mapp card-img-top"></div>
+                <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+                <div class="card-body">
+                  <h5 class="card-title">{{ places[7].name }}</h5>
+
+                </div>
+              </div>
+
+              <br>
+
+
+              <div class="card" style="width: 40rem;">
+                <div id="map9" class="mapp card-img-top"></div>
+                <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+                <div class="card-body">
+                  <h5 class="card-title">{{ places[8].name }}</h5>
+
+                </div>
+              </div>
+
+              <br>
+
+
+              <div class="card" style="width: 40rem;">
+                <div id="map10" class="mapp card-img-top"></div>
+                <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+                <div class="card-body">
+                  <h5 class="card-title">{{ places[9].name }}</h5>
+
+                </div>
+              </div>
+
+              <br>
+
+
+
+
+
+
+            </div>
+
+
+            <img src="http://maps.googleapis.com/maps/api/staticmap?center=-15.800513,-47.91378&zoom=11&size=200x200&sensor=false">
+
+            <script>
+
+              // Initialize and add the map
+              function initMap() {
+                // The location of Uluru 
+
+                var lati = ['{{ lat[0] }}', '{{ lat[1] }}', '{{ lat[2] }}', '{{ lat[3] }}', '{{ lat[4] }}', '{{ lat[5] }}', '{{ lat[6] }}', '{{ lat[7] }}', '{{ lat[8] }}', '{{ lat[9] }}'];
+                var lngi = [
+                  '{{ lng[0] }}', '{{ lng[1] }}', '{{ lng[2] }}', '{{ lng[3] }}', '{{ lng[4] }}', '{{ lng[5] }}', '{{ lng[6] }}', '{{ lng[7] }}', '{{ lng[8] }}', '{{ lng[9] }}'
+                ];
+
+                var uluru = { lat: parseFloat(lati[0]), lng: parseFloat(lngi[0]) };
+                // The map, centered at Uluru
+                var map = new google.maps.Map(
+                  document.getElementById('map1'), { zoom: 4, center: uluru });
+                // The marker, positioned at Uluru
+                var marker = new google.maps.Marker({ position: uluru, map: map });
+
+                var uluru2 = { lat: parseFloat(lati[1]), lng: parseFloat(lngi[1]) };
+                // The map, centered at Uluru
+                var map2 = new google.maps.Map(
+                  document.getElementById('map2'), { zoom: 4, center: uluru2 });
+                // The marker, positioned at Uluru
+                var marker2 = new google.maps.Marker({ position: uluru2, map: map2 });
+
+                var uluru3 = { lat: parseFloat(lati[2]), lng: parseFloat(lngi[2]) };
+                // The map, centered at Uluru
+                var map3 = new google.maps.Map(
+                  document.getElementById('map3'), { zoom: 4, center: uluru3 });
+                // The marker, positioned at Uluru
+                var marker3 = new google.maps.Marker({ position: uluru3, map: map3 });
+
+                var uluru4 = { lat: parseFloat(lati[3]), lng: parseFloat(lngi[3]) };
+                // The map, centered at Uluru
+                var map4 = new google.maps.Map(
+                  document.getElementById('map4'), { zoom: 4, center: uluru4 });
+                // The marker, positioned at Uluru
+                var marker4 = new google.maps.Marker({ position: uluru4, map: map4 });
+
+
+                var uluru5 = { lat: parseFloat(lati[4]), lng: parseFloat(lngi[4]) };
+                var map5 = new google.maps.Map(
+                  document.getElementById('map5'), { zoom: 4, center: uluru5 });
+                // The marker, positioned at Uluru
+                var marker5 = new google.maps.Marker({ position: uluru5, map: map5 });
+
+
+                var uluru6 = { lat: parseFloat(lati[5]), lng: parseFloat(lngi[5]) };
+
+                var map6 = new google.maps.Map(
+                  document.getElementById('map6'), { zoom: 4, center: uluru6 });
+                // The marker, positioned at Uluru
+                var marker6 = new google.maps.Marker({ position: uluru6, map: map6 });
+
+                var uluru7 = { lat: parseFloat(lati[6]), lng: parseFloat(lngi[6]) };
+
+                var map7 = new google.maps.Map(
+                  document.getElementById('map7'), { zoom: 4, center: uluru7 });
+                // The marker, positioned at Uluru
+                var marker7 = new google.maps.Marker({ position: uluru7, map: map7 });
+
+
+                var uluru8 = { lat: parseFloat(lati[7]), lng: parseFloat(lngi[7]) };
+
+                var map8 = new google.maps.Map(
+                  document.getElementById('map8'), { zoom: 4, center: uluru8 });
+                // The marker, positioned at Uluru
+                var marker8 = new google.maps.Marker({ position: uluru8, map: map8 });
+
+
+                var uluru9 = { lat: parseFloat(lati[8]), lng: parseFloat(lngi[8]) };
+
+                var map9 = new google.maps.Map(
+                  document.getElementById('map9'), { zoom: 4, center: uluru9 });
+                // The marker, positioned at Uluru
+                var marker9 = new google.maps.Marker({ position: uluru9, map: map9 });
+
+
+                var uluru10 = { lat: parseFloat(lati[9]), lng: parseFloat(lngi[9]) };
+
+                var map10 = new google.maps.Map(
+                  document.getElementById('map10'), { zoom: 4, center: uluru10 });
+                // The marker, positioned at Uluru
+                var marker10 = new google.maps.Marker({ position: uluru10, map: map10 });
+
+
+
+
+
+
+              }
+
+            </script>
+            <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArWLYsjxyxIDjybWoWJ-ZGcDQPulG3aRU&callback=initMap">
+            </script>
+          </body>
+
+          </html>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
